@@ -1,0 +1,14 @@
+{
+  "name": "4yousee",
+  "version": "1.0.0",
+  "description": "Automação para vaga de QA na 4YouSee",
+  "main": "index.js",
+  "scripts": {
+    "test": "protractor"
+  },
+  "keywords": [
+    "protractor"
+  ],
+  "author": "Paulo Henrique Rocha Gonçalves <paulorochag@hotmail.com>",
+  "license": "ISC"
+}
