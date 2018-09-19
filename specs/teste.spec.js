@@ -28,7 +28,7 @@ describe('Testes de Cadastro de Agência e Cliente', ()=>
         browser.close();
     });
 	
-	it('Validar com sucesso o cadastro de um cliente utilziando apenas campos obrigatórios', ()=> {
+	it('Validar com sucesso o cadastro de um cliente utilizando apenas campos obrigatórios', ()=> {
 		// act		
 		adicionarClienteAgencia.Visita();
         
