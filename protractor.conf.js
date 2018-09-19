@@ -53,7 +53,7 @@ module.exports.config =
 		}));
 		
     	browser.manage().timeouts().implicitlyWait(browser.params.TempoEmMilissegundosTimeout)
-		// browser.driver.manage().window().maximize();
+		browser.driver.manage().window().maximize();
 		browser.waitForAngularEnabled(false);
 	},
 };

@@ -38,7 +38,7 @@ describe('Testes de Cadastro de Agência e Cliente', ()=>
         clienteAgencia.CadastrarCliente(objCliente);
 
         clienteAgencia.PesquisarClienteAgencia('Nome Fantasia Automação' + caracterAleatorio, '');
-        // browser.sleep(4000);
+        browser.sleep(4000);
 	});
 	
 });
