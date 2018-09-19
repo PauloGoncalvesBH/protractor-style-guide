@@ -1,5 +1,7 @@
 ![picture alt](images/protractor-pequeno.png "Protractor - end to end testing for AngularJS")
-# QA-4YouSee
+
+# QA-4YouSee [![Dependabot badge](https://camo.githubusercontent.com/1fe7004c016a5ab641008b9579409c784eaa1725/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446570656e6461626f742d656e61626c65642d626c75652e737667)](https://dependabot.com/)
+
 Automação para vaga de QA na 4YouSee
 
 ## Como executar os testes
