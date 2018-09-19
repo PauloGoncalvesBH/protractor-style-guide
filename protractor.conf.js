@@ -13,7 +13,7 @@ module.exports.config =
 	],
 	maxSessions: 1,
 	
-	baseUrl: 'http://qa.4yousee.com.br/admin/',
+	baseUrl: 'http://homologacao.4yousee.com.br/admin/',
 	
 	suites:
 	{
@@ -53,7 +53,7 @@ module.exports.config =
 		}));
 		
     	browser.manage().timeouts().implicitlyWait(browser.params.TempoEmMilissegundosTimeout)
-		browser.driver.manage().window().maximize();
+		// browser.driver.manage().window().maximize();
 		browser.waitForAngularEnabled(false);
 	},
 };
