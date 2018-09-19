@@ -5,13 +5,10 @@ Automação para vaga de QA na 4YouSee
 
 2 - Faça um clone do repositório.
 
-3 - Abra o CMD até o repositório QA-4YouSee e digite o comando:
-  webdriver-manager update
-  
-4 - Para instalar as depedências digite o comando:
+3 - Abra o CMD até o repositório QA-4YouSee e digite o comando para atualizra as dependências:
   npm install
   
-5 - Para rodar o teste digite o comando:
+4 - Para rodar o teste digite o comando:
   protractor
   
 
