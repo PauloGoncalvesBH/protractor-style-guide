@@ -7,9 +7,10 @@ module.exports.config =
 {
 	directConnect: true,	
 	
-   	multiCapabilities:
+	multiCapabilities:
 	[
-		{'browserName': 'chrome'}
+		{'browserName': 'chrome'/*, 'chromeOptions': { 'args': ['headless']}*/}
+		//,{'browserName': 'firefox'}
 	],
 	maxSessions: 1,
 	
@@ -18,7 +19,7 @@ module.exports.config =
 	suites:
 	{
 		// Testes
-		QueroMeCadastrar: 'specs/teste.spec.js'
+		QueroMeCadastrar: 'specs/ClienteAgencia.spec.js'
 	},
 	
 	params:
@@ -26,7 +27,7 @@ module.exports.config =
 		/* Tempo utilizado em: 
 		1 - No ImplicitlyWait no onPrepare do Conf.js
 		2 - No método AguardarElemento no helper.js */
-		TempoEmMilissegundosTimeout: 5000,
+		TempoEmMilissegundosTimeout: 10000,
 	},
 
 	onPrepare: function()
@@ -45,7 +46,7 @@ module.exports.config =
 		{
 			takeScreenshots: true,
 			savePath: 'report/',
-			fileNamePrefix: 'Cadastro de Clientes e Agências',
+			fileNamePrefix: 'Automação Paulo Gonçalves',
 			fileNameSeparator: '-',
 			fileNameDateSuffix: true,
 			cleanDestination: false,
@@ -54,6 +55,8 @@ module.exports.config =
 		
     	browser.manage().timeouts().implicitlyWait(browser.params.TempoEmMilissegundosTimeout)
 		browser.driver.manage().window().maximize();
+
+		// Para garantir a sincronia do script de teste com a página a ser automatizada. A página não foi feita em Angular JS.
 		browser.waitForAngularEnabled(false);
 	},
 };
