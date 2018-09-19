@@ -9,8 +9,8 @@ module.exports.config =
 	
 	multiCapabilities:
 	[
-		{'browserName': 'chrome'/*, 'chromeOptions': { 'args': ['headless']}*/}
-		//,{'browserName': 'firefox'}
+		{'browserName': 'chrome'}
+		// ,{'browserName': 'firefox'}
 	],
 	maxSessions: 1,
 	
@@ -50,7 +50,7 @@ module.exports.config =
 			fileNameSeparator: '-',
 			fileNameDateSuffix: true,
 			cleanDestination: false,
-			takeScreenshotsOnlyOnFailures: true
+			takeScreenshotsOnlyOnFailures: false
 		}));
 		
     	browser.manage().timeouts().implicitlyWait(browser.params.TempoEmMilissegundosTimeout)
