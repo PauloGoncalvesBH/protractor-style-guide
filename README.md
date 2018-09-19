@@ -2,7 +2,7 @@
 # QA-4YouSee
 Automação para vaga de QA na 4YouSee
 
-### Como executar os testes
+## Como executar os testes
 
 **1** - Instale o Node.js: https://nodejs.org/en/download/
 
@@ -18,9 +18,13 @@ Automação para vaga de QA na 4YouSee
   protractor
 ```
 
-### Observações
+## Observações
+
+### Relatório de resultado
 
 * O relatório do resultado será gerado no diretório 'report/'. Os relatórios não são deletados para que possua um histórico de execução.
+
+### Execução em múltiplos navegadores
 
 * Os testes serão executados no Google Chrome. Para que os testes rodem no Google Chrome e também no Firefox, vá até o arquivo [protractor.conf.js](protractor.conf.js), descomente a seguinte linha (linha 13) e salve:
 ```javascript
@@ -36,3 +40,22 @@ Automação para vaga de QA na 4YouSee
  ```javascript
   maxSessions: 2,
  ```
+
+### Headless
+
+* Também é possível executar o Google Chrome em modo [headless](https://developers.google.com/web/updates/2017/04/headless-chrome), ou seja "escondido", sem que abra a interface gráfica, muito útil para servidores de integração contínua, que não possuem um UI Shell visível.
+  Caso queira que isso ocorra, faça os seguintes passos:
+ 
+**1** - Delete as alterações que fez referente aos 2 passos anteriores, voltando o arquivo *conf* para a sua forma original (*CTRL + Z* resolve).
+
+**2** - Altere a seguinte linha:
+```javascript
+  {'browserName': 'chrome'}
+```
+
+para
+```javascript
+  {'browserName': 'chrome', 'chromeOptions': { 'args': ['headless']}}
+```
+
+ Nesse ponto, execute os testes com o comando *Protractor* e verifique que os resultados aparecem no CMD, porém sem abrir o Google Chrome. Bem como o relatório final também é gerado, tirando print como se não estivesse em modo *headless*.
