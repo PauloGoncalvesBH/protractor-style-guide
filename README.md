@@ -5,7 +5,7 @@ Automação para vaga de QA na 4YouSee
 
 2 - Faça um clone do repositório.
 
-3 - Abra o CMD até o repositório QA-4YouSee e digite o comando para atualizra as dependências:
+3 - Abra o CMD até o repositório QA-4YouSee e digite o comando para atualizar as dependências:
   npm install
   
 4 - Para rodar o teste digite o comando:
