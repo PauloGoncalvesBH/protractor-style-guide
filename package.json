@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Automação para vaga de QA na 4YouSee",
   "main": "index.js",
+  "scripts": {
+    "test": "webdriver-manager update && protractor"
+  },
   "keywords": [
     "protractor"
   ],
