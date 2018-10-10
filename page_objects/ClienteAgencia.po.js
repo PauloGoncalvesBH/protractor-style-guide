@@ -1,93 +1,70 @@
-'use strict'
+"use strict"
 
-require('../ElementFinder.js');
+const protractorHelper = require("protractor-helper");
+const helper = require("../helper");
 
 class ClienteAgencia {
 
 	constructor() {
-		// Botão de acesso a telas
-		this.AdicionarClienteAgencia = element(by.css('a[href="/admin/cliente.php?ac=adicionar"]'));
+		this.adicionarClienteAgenciaButton = element(by.css(
+			"a[href='/admin/cliente.php?ac=adicionar']"
+		));
+		this.agenciaRadio = element(by.css("[value='A']"));
+		this.razaoSocialInput = element(by.id("empRazao"));
+		this.nomeFantasiaInput = element(by.id("empFantasia"));
+		this.emailInput = element(by.id("email"));
+		this.adicionarButton = element(by.id("Adicionar"));
+		this.pesquisaNomeFantasiaInput = element(by.name("nome_fantasia"));
+		this.pesquisaCNPJInput = element(by.id("cnpj"));
+		this.pesquisarButton = element(by.css("[value='Pesquisar']"));
+	};
 
-		// Cadastro de Cliente e Agência
-		this.ClienteRadio = element(by.css('[value="C"]'));
-		this.AgenciaRadio = element(by.css('[value="A"]'));
+	preencherCamposDeCadastroClienteAgencia(
+			razaoSocial = helper.requiredParam(preencherCamposDeCadastroClienteAgencia, "razaoSocial"),
+			nomeFantasia = helper.requiredParam(preencherCamposDeCadastroClienteAgencia, "nomeFantasia"),
+			email = helper.requiredParam(preencherCamposDeCadastroClienteAgencia, "email")
+		) {
+		protractorHelper.fillFieldWithTextWhenVisible(this.razaoSocialInput, razaoSocial);
+		protractorHelper.fillFieldWithTextWhenVisible(this.nomeFantasiaInput, nomeFantasia);
+		protractorHelper.fillFieldWithTextWhenVisible(this.emailInput, email);
+		protractorHelper.clickWhenClickable(this.adicionarButton);
+	};
 
-		this.RazaoSocial = element(by.id('empRazao'));
-		this.NomeFantasia = element(by.id('empFantasia'));
-		this.CNPJ = element(by.id('empCNPJ'));
-		this.Atuacao = element(by.id('empAtuacao'));
-		this.Endereco = element(by.id('endLogradouro'));
-		this.Numero = element(by.id('endNumero'));
-		this.Complemento = element(by.id('endComplemento'));
-		this.Bairro = element(by.id('endBairro'));
-		this.Cidade = element(by.id('endCidade'));
-		this.CEP = element(by.id('endCEP'));
-		this.Estado = element(by.id('endEstado'));
-		this.Email = element(by.id('email'));
-		this.NomeContato = element(by.id('nomeContato'));
-		this.TelefoneContatoDDD = element(by.id('telContato_ddd'));
-		this.TelefoneContato = element(by.id('telContato'));
-		this.TelefoneCelularDDD = element(by.id('telCelular_ddd'));
-		this.TelefoneCelular = element(by.id('telCelular'));
+	acessarAdicionarClienteAgencia() {
+		protractorHelper.clickWhenClickable(
+			this.adicionarClienteAgenciaButton
+		);
+	};
 
-		this.AdicionarButton = element(by.id('Adicionar'));
+	cadastrarCliente(razaoSocial = "", nomeFantasia = "", email = "") {
+		this.acessarAdicionarClienteAgencia();
+		this.preencherCamposDeCadastroClienteAgencia(razaoSocial, nomeFantasia, email);
+	};
 
-		// Pesquisar Cliente e Agência
-		this.PesquisaNomeFantasia = element(by.name('nome_fantasia'));
-		this.PesquisaCNPJ = element(by.id('cnpj'));
-		
-		this.PesquisarButton = element(by.css('[value="Pesquisar"]'));
-	}
+	cadastrarAgencia(razaoSocial = "", nomeFantasia = "", email = "") {
+		this.acessarAdicionarClienteAgencia();
+		protractorHelper.clickWhenClickable(this.agenciaRadio);
+		this.preencherCamposDeCadastroClienteAgencia(razaoSocial, nomeFantasia, email);
+	};
 
-	AcessarAdicionarClienteAgencia() {
-		this.AdicionarClienteAgencia.Clicar();
-	}
-
-	CadastrarCliente(objeto)
-	{
-		this.AcessarAdicionarClienteAgencia();
-		this._PreencherCamposDeCadastroClienteAgencia(objeto);
-	}
-
-	CadastrarAgencia(objeto)
-	{
-		this.AcessarAdicionarClienteAgencia();
-		this.AgenciaRadio.Clicar();
-		this._PreencherCamposDeCadastroClienteAgencia(objeto);
-	}
-
-	_PreencherCamposDeCadastroClienteAgencia(objetoCadastro) {
-		this.RazaoSocial.EnviarTexto(objetoCadastro.razaosocial);
-		this.NomeFantasia.EnviarTexto(objetoCadastro.nomefantasia);
-		this.CNPJ.EnviarTexto(objetoCadastro.cnpj);
-		this.Atuacao.EnviarTexto(objetoCadastro.atuacao);
-		this.Endereco.EnviarTexto(objetoCadastro.endereco);
-		this.Numero.EnviarTexto(objetoCadastro.numero);
-		this.Complemento.EnviarTexto(objetoCadastro.complemento);
-		this.Bairro.EnviarTexto(objetoCadastro.bairro);
-		this.Cidade.EnviarTexto(objetoCadastro.cidade);
-		this.CEP.EnviarTexto(objetoCadastro.cep);
-		this.Estado.EnviarTexto(objetoCadastro.estado);
-		this.Email.EnviarTexto(objetoCadastro.email);
-		this.NomeContato.EnviarTexto(objetoCadastro.nomecontato);
-		this.TelefoneContatoDDD.EnviarTexto(objetoCadastro.telefonecontatoddd);
-		this.TelefoneContato.EnviarTexto(objetoCadastro.telefonecontato);
-		this.TelefoneCelularDDD.EnviarTexto(objetoCadastro.telefonecelularddd);
-		this.TelefoneCelular.EnviarTexto(objetoCadastro.telefonecelular);
-
-		this.AdicionarButton.Clicar();
-	}
-
-	PesquisarClienteAgencia(NomeFantasia, CNPJ) {
-		this.PesquisaNomeFantasia.Limpar();
-		this.PesquisaNomeFantasia.EnviarTexto(NomeFantasia);
-
-		this.PesquisaCNPJ.Limpar();
-		this.PesquisaCNPJ.EnviarTexto(CNPJ);
-
-		this.PesquisarButton.Clicar();
-	}
+	pesquisarClienteAgencia(
+		NomeFantasia = helper.requiredParam(
+				pesquisarClienteAgencia,
+				"NomeFantasia"
+			),
+		CNPJ = ""
+	) {
+		protractorHelper.clearFieldWhenVisibleAndFillItWithText(
+            this.pesquisaNomeFantasiaInput,
+            NomeFantasia
+        );
+		protractorHelper.clearFieldWhenVisibleAndFillItWithText(
+			this.pesquisaCNPJInput,
+			CNPJ
+		);
+		protractorHelper.clickWhenClickable(this.pesquisarButton);
+	};
 	
-}
+};
 
-module.exports = ClienteAgencia;
+module.exports = new ClienteAgencia();

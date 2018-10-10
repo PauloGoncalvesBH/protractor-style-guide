@@ -2,7 +2,7 @@
 
 # QA-4YouSee [![Dependabot badge](https://camo.githubusercontent.com/1fe7004c016a5ab641008b9579409c784eaa1725/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446570656e6461626f742d656e61626c65642d626c75652e737667)](https://dependabot.com/)
 
-Automação para vaga de QA na 4YouSee
+Automação para vaga de QA.
 
 ## Como executar os testes
 
@@ -57,7 +57,7 @@ Automação para vaga de QA na 4YouSee
 
 para
 ```javascript
-  {'browserName': 'chrome', 'chromeOptions': { 'args': ['headless']}}
+  {'browserName': 'chrome', 'chromeOptions': { 'args':  ["--headless", "--disable-gpu", "--window-size=1024,768"]}}
 ```
 
  Nesse ponto, execute os testes com o comando *Protractor* e verifique que os resultados aparecem no CMD, porém sem abrir o Google Chrome. Bem como o relatório final também é gerado, tirando print como se não estivesse em modo *headless*.

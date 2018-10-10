@@ -1,30 +1,33 @@
-'use strict'
+"use strict"
 
-require('../ElementFinder.js');
+const protractorHelper = require("protractor-helper");
+const helper = require("../helper");
 
 class Login {
-
-	constructor() {
-		// Elementos para login
-		this.Usuario = element(by.name('usr_log'));
-		this.Senha = element(by.name('usr_sen'));
-		this.EntrarButton = element(by.css('[value="Entrar"]'));
-	}
-
-	Visita() {
-		browser.get('index.php');
-	}
-
-	Login(usuario, senha) {
-		this.Usuario.EnviarTexto(usuario);
-		this.Senha.EnviarTexto(senha);
-		this.EntrarButton.Clicar();
-	}
-
-	Logout() {
-		browser.get('index.php?ac=logout');
-	}
 	
+	constructor() {
+		this.usuarioInput = element(by.name("usr_log"));
+		this.senhaInput = element(by.name("usr_sen"));
+		this.entrarButton = element(by.css("[value='Entrar']"));
+	}
+
+	visit() {
+		browser.get("index.php");
+	}
+
+	login(
+		usuario = helper.requiredParam(login, "usuario"),
+		senha = helper.requiredParam(login, "senha")
+	) {
+		protractorHelper.fillFieldWithTextWhenVisible(this.usuarioInput, usuario);
+		protractorHelper.fillFieldWithTextWhenVisible(this.senhaInput, senha);
+		protractorHelper.clickWhenClickable(this.entrarButton);
+	}
+
+	logout() {
+		browser.get("index.php?ac=logout");
+	}
+
 }
 
-module.exports = Login;
+module.exports = new Login();

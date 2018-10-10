@@ -1,26 +1,26 @@
-'use strict'
+"use strict"
 
-require('../ElementFinder.js');
+const protractorHelper = require("protractor-helper");
 
 class Home {
 
 	constructor() {
-        // Menu lateral
-        this.Conteudo = element(by.cssContainingText('a[href="#"]', 'Conteúdo'));
+		this.ConteudoButton = element(by.cssContainingText(
+			"a[href='#']",
+			"Conteúdo"
+		));
+		this.conteudoClienteAgenciaButton = element(by.css(
+			"a[href='"
+			+ browser.baseUrl +
+			"cliente.php?ac=listar']"
+		));
+	};
 
-		// Opções de 'Conteúdo'
-		this.ConteudoClienteAgencia = element(by.css('a[href="http://homologacao.4yousee.com.br/admin/cliente.php?ac=listar"]'));
-	}
+	acessarClienteAgencia() {
+		protractorHelper.clickWhenClickable(this.ConteudoButton);
+		protractorHelper.clickWhenClickable(this.conteudoClienteAgenciaButton);
+	};
 
-    _AbrirMenuConteudo() {
-        this.Conteudo.Clicar();
-    }
+};
 
-	AcessarClienteAgencia() {
-        this._AbrirMenuConteudo();
-		this.ConteudoClienteAgencia.Clicar();
-	}
-	
-}
-
-module.exports = Home;
+module.exports = new Home();

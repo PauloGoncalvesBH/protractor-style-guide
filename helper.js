@@ -1,42 +1,30 @@
-'use strict'
+"use strict"
 
-const shortid = require('shortid');
-require('./ElementFinder.js');
+const shortid = require("shortid");
 
 class Helper {
 
-	constructor() {
-	}
-
-	AguardarElementoEScrollAteElemento(elemento) {
-		this.AguardarElemento(elemento);
-		this.ScrollAteElemento(elemento);
-	}
-
-	AguardarElemento(elemento) {
-		browser.wait(protractor.ExpectedConditions.elementToBeClickable(elemento), browser.params.TempoEmMilissegundosTimeout)
-	}
-
-	ScrollAteElemento(elemento) {
-		browser.executeScript('arguments[0].scrollIntoView(true);', elemento); 
-	}
-    
-	RecarregarPagina() {
-		browser.refresh();
-	}
-
-	GerarCaracteres() {
+	gerarCaracteres() {
 		return shortid.generate();
-	}
+	};
 
-	GerarEmail() {
-		return this.GerarCaracteres() + '@4yousee.com.br';
-	}
+	gerarEmail() {
+		return this.gerarCaracteres() + "@4yousee.com.br";
+	};
 
-	GerarUsuario() {
-		return this.GerarCaracteres() + this.GerarCaracteres();
-	}
+	requiredParam(
+		functionWithoutParam,
+		requiredParameter = "htmlElement"
+	) {
+		const requiredParamError = new Error(
+			`Parameter "${requiredParameter}" is missing at function "${
+			functionWithoutParam.name
+			}()". \nFill the required parameter.`
+		);
+		Error.captureStackTrace(requiredParamError, functionWithoutParam);
+		throw requiredParamError;
+	};
 
-}
+};
 
-module.exports = Helper;
+module.exports = new Helper();
