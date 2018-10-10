@@ -1,63 +1,27 @@
-![picture alt](images/protractor-pequeno.png "Protractor - end to end testing for AngularJS")
+![picture alt](https://raw.githubusercontent.com/PauloGoncalvesBH/QA-4YouSee/a4417ae184a0d87587fbc0209634ef19affec7f4/images/protractor-pequeno.png)
 
 # QA-4YouSee [![Dependabot badge](https://camo.githubusercontent.com/1fe7004c016a5ab641008b9579409c784eaa1725/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f446570656e6461626f742d656e61626c65642d626c75652e737667)](https://dependabot.com/)
 
 Automação para vaga de QA.
 
-## Como executar os testes
+## Pré-requisito
 
-**1** - Instale o Node.js: https://nodejs.org/en/download/
+[Node.js](https://nodejs.org/en/download/)
 
-**2** - Faça um clone do repositório.
+## Passos para executar os testes
 
-**3** - Abra o CMD até estar dentro do diretório 'QA-4YouSee' e digite o seguinte comando para instalar as dependências:
-```
-  npm install
+**1** - Faça um clone do repositório.
+
+**2** - Abra o CMD até estar dentro do diretório 'QA-4YouSee' e digite o seguinte comando para instalar as dependências:
+```sh
+  npm i
 ```
   
-**4** - Para rodar o teste digite o comando:
+**3** - Para rodar o teste digite o comando:
+```sh
+  npm t
 ```
-  npm test
-```
-
-## Observações
 
 ### Relatório de resultado
 
-* O relatório do resultado será gerado no diretório 'report/'. Os relatórios não são deletados para que possua um histórico de execução.
-
-### Execução em múltiplos navegadores
-
-* Os testes serão executados no Google Chrome. Para que os testes rodem no Google Chrome e também no Firefox, vá até o arquivo [protractor.conf.js](protractor.conf.js), descomente a seguinte linha (linha 13) e salve:
-```javascript
-  // ,{'browserName': 'firefox'}
-```
-
-* Caso deseje ir além do passo acima, e queira que os testes nos 2 navegadores rodem simultaneamente, e não 1 após o outro. Altere o seguinte trecho de
- ```javascript
-  maxSessions: 1,
- ```
-
- para:
- ```javascript
-  maxSessions: 2,
- ```
-
-### Headless
-
-* Também é possível executar o Google Chrome em modo [headless](https://developers.google.com/web/updates/2017/04/headless-chrome), ou seja "escondido", sem que abra a interface gráfica, muito útil para servidores de integração contínua, que não possuem um UI Shell visível.
-  Caso queira que isso ocorra, faça os seguintes passos:
- 
-**1** - Delete as alterações que fez referente aos 2 passos anteriores, voltando o arquivo *conf* para a sua forma original (*CTRL + Z* resolve).
-
-**2** - Altere a seguinte linha:
-```javascript
-  {'browserName': 'chrome'}
-```
-
-para
-```javascript
-  {'browserName': 'chrome', 'chromeOptions': { 'args':  ["--headless", "--disable-gpu", "--window-size=1024,768"]}}
-```
-
- Nesse ponto, execute os testes com o comando *Protractor* e verifique que os resultados aparecem no CMD, porém sem abrir o Google Chrome. Bem como o relatório final também é gerado, tirando print como se não estivesse em modo *headless*.
+* O relatório do resultado será gerado no diretório 'report/'.
