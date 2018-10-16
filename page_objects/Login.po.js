@@ -1,10 +1,8 @@
 "use strict"
 
-const protractorHelper = require("protractor-helper");
-const helper = require("../helper");
+const helper = require("protractor-helper");
 
 class Login {
-	
 	constructor() {
 		this.usuarioInput = element(by.name("usr_log"));
 		this.senhaInput = element(by.name("usr_sen"));
@@ -15,19 +13,11 @@ class Login {
 		browser.get("index.php");
 	}
 
-	login(
-		usuario = helper.requiredParam(login, "usuario"),
-		senha = helper.requiredParam(login, "senha")
-	) {
-		protractorHelper.fillFieldWithTextWhenVisible(this.usuarioInput, usuario);
-		protractorHelper.fillFieldWithTextWhenVisible(this.senhaInput, senha);
-		protractorHelper.clickWhenClickable(this.entrarButton);
+	fillFormAndSubmit(usuario = "", senha = "") {
+		helper.fillFieldWithTextWhenVisible(this.usuarioInput, usuario);
+		helper.fillFieldWithTextWhenVisible(this.senhaInput, senha);
+		helper.clickWhenClickable(this.entrarButton);
 	}
-
-	logout() {
-		browser.get("index.php?ac=logout");
-	}
-
 }
 
 module.exports = new Login();

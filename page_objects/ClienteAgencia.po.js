@@ -1,10 +1,8 @@
 "use strict"
 
-const protractorHelper = require("protractor-helper");
-const helper = require("../helper");
+const helper = require("protractor-helper");
 
 class ClienteAgencia {
-
 	constructor() {
 		this.adicionarClienteAgenciaButton = element(by.css(
 			"a[href='/admin/cliente.php?ac=adicionar']"
@@ -19,21 +17,15 @@ class ClienteAgencia {
 		this.pesquisarButton = element(by.css("[value='Pesquisar']"));
 	};
 
-	preencherCamposDeCadastroClienteAgencia(
-			razaoSocial = helper.requiredParam(preencherCamposDeCadastroClienteAgencia, "razaoSocial"),
-			nomeFantasia = helper.requiredParam(preencherCamposDeCadastroClienteAgencia, "nomeFantasia"),
-			email = helper.requiredParam(preencherCamposDeCadastroClienteAgencia, "email")
-		) {
-		protractorHelper.fillFieldWithTextWhenVisible(this.razaoSocialInput, razaoSocial);
-		protractorHelper.fillFieldWithTextWhenVisible(this.nomeFantasiaInput, nomeFantasia);
-		protractorHelper.fillFieldWithTextWhenVisible(this.emailInput, email);
-		protractorHelper.clickWhenClickable(this.adicionarButton);
+	preencherCamposDeCadastroClienteAgencia(razaoSocial = "", nomeFantasia = "", email = "") {
+		helper.fillFieldWithTextWhenVisible(this.razaoSocialInput, razaoSocial);
+		helper.fillFieldWithTextWhenVisible(this.nomeFantasiaInput, nomeFantasia);
+		helper.fillFieldWithTextWhenVisible(this.emailInput, email);
+		helper.clickWhenClickable(this.adicionarButton);
 	};
 
 	acessarAdicionarClienteAgencia() {
-		protractorHelper.clickWhenClickable(
-			this.adicionarClienteAgenciaButton
-		);
+		helper.clickWhenClickable(this.adicionarClienteAgenciaButton);
 	};
 
 	cadastrarCliente(razaoSocial = "", nomeFantasia = "", email = "") {
@@ -43,28 +35,21 @@ class ClienteAgencia {
 
 	cadastrarAgencia(razaoSocial = "", nomeFantasia = "", email = "") {
 		this.acessarAdicionarClienteAgencia();
-		protractorHelper.clickWhenClickable(this.agenciaRadio);
+		helper.clickWhenClickable(this.agenciaRadio);
 		this.preencherCamposDeCadastroClienteAgencia(razaoSocial, nomeFantasia, email);
 	};
 
-	pesquisarClienteAgencia(
-		NomeFantasia = helper.requiredParam(
-				pesquisarClienteAgencia,
-				"NomeFantasia"
-			),
-		CNPJ = ""
-	) {
-		protractorHelper.clearFieldWhenVisibleAndFillItWithText(
+	pesquisarClienteAgencia(NomeFantasia = "", CNPJ = "") {
+		helper.clearFieldWhenVisibleAndFillItWithText(
             this.pesquisaNomeFantasiaInput,
             NomeFantasia
         );
-		protractorHelper.clearFieldWhenVisibleAndFillItWithText(
+		helper.clearFieldWhenVisibleAndFillItWithText(
 			this.pesquisaCNPJInput,
 			CNPJ
 		);
-		protractorHelper.clickWhenClickable(this.pesquisarButton);
+		helper.clickWhenClickable(this.pesquisarButton);
 	};
-	
 };
 
 module.exports = new ClienteAgencia();

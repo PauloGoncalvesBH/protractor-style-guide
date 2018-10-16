@@ -13,11 +13,7 @@
     "type": "git",
     "url": "https://github.com/PauloGoncalvesBH/QA-4YouSee.git"
   },
-  "author": {
-    "name": "Paulo Henrique Rocha Gonçalves",
-    "email": "paulorochag@hotmail.com",
-    "url": "https://www.linkedin.com/in/paulo-goncalves/"
-  },
+  "author": "Paulo Henrique Rocha Gonçalves <paulorochag@hotmail.com>",
   "license": "ISC",
   "dependencies": {
     "jasmine-spec-reporter": "^4.2.1",

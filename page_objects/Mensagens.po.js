@@ -1,7 +1,6 @@
 "use strict"
 
 class Mensagens {
-    
     constructor() {
         this.nomeFantasiaNaoPreenchido = element(by.cssContainingText(
             "p",
@@ -12,7 +11,6 @@ class Mensagens {
             "O campo Razão social não foi preenchido." 
         ));
     };
-
 };
 
 module.exports = new Mensagens();
