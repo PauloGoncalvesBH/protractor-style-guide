@@ -4,9 +4,8 @@ const SpecReporter = require("jasmine-spec-reporter").SpecReporter;
 const Jasmine2HtmlReporter = require("protractor-jasmine2-html-reporter");
 
 module.exports.config = {
-
-	directConnect: true,
-	
+	baseUrl: "http://homologacao.4yousee.com.br/admin/",
+	specs: ["specs/*.spec.js"],
 	capabilities: {
 		browserName: "chrome",
 		chromeOptions: {
@@ -17,43 +16,32 @@ module.exports.config = {
 			],
 		},
 	},
-	
-	baseUrl: "http://homologacao.4yousee.com.br/admin/",
-	
-	specs: ["specs/*.spec.js"],
-	
 	params: {
-		Login: {
-            Usuario: "avaliacao",
-            Senha: "4yousee"
+		// Os valores de USUARIO e SENHA são definidos como variável de ambiente do usuário.
+		// Isso é para garantir segurança, não versionando informações privadas.
+		login: {
+            usuario: process.env.USUARIO,
+            senha: process.env.SENHA
 		}
 	},
-
+	// highlightDelay: 1000,
 	onPrepare: () => {
-		// Organiza os resultados no Prompt de Comando.
+		browser.ignoreSynchronization = true;
 		jasmine.getEnv().addReporter(new SpecReporter({
 			displayFailuresSummary: true,
 			displayFailedSpec: true,
 			displaySuiteNumber: true,
 			displaySpecDuration: true
 		}));
-		
-		// Gera relatório de resultados no diretório especificado.
 		jasmine.getEnv().addReporter(new Jasmine2HtmlReporter({
 			takeScreenshots: true,
 			savePath: "report/",
-			fileNamePrefix: "Automação Paulo Gonçalves",
-			fileNameSeparator: "-",
 			fileNameDateSuffix: true,
 			cleanDestination: true,
 			takeScreenshotsOnlyOnFailures: true
 		}));
-
-		browser.driver.manage().window().maximize();
-
-		browser.waitForAngularEnabled(false);
 	},
-
-	// highlightDelay: 3000,
-	
+	jasmineNodeOpts: {
+		random: true
+	},
 };

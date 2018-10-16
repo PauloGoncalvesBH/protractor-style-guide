@@ -6,7 +6,9 @@ Automação para vaga de QA.
 
 ## Pré-requisito
 
-[Node.js](https://nodejs.org/en/download/)
+**1** - [Node.js](https://nodejs.org/en/download/)
+
+**2** - Adicionar as seguintes variáveis de ambiente do usuário com seus respectivos valores: `USUARIO` e `SENHA` 
 
 ## Passos para executar os testes
 
@@ -17,7 +19,7 @@ Automação para vaga de QA.
   npm i
 ```
   
-**3** - Para rodar o teste digite o comando:
+**3** - Para rodar os testes digite o comando:
 ```sh
   npm t
 ```
