@@ -1,6 +1,6 @@
 "use strict"
 
-const helper = require("protractor-helper");
+const Helper = require("protractor-helper");
 
 class Home {
 	constructor() {
@@ -16,8 +16,8 @@ class Home {
 	};
 
 	acessarClienteAgencia() {
-		helper.clickWhenClickable(this.ConteudoButton);
-		helper.clickWhenClickable(this.conteudoClienteAgenciaButton);
+		Helper.clickWhenClickable(this.ConteudoButton);
+		Helper.clickWhenClickable(this.conteudoClienteAgenciaButton);
 	};
 };
 

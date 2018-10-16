@@ -1,6 +1,6 @@
 "use strict"
 
-const helper = require("protractor-helper");
+const Helper = require("protractor-helper");
 
 class ClienteAgencia {
 	constructor() {
@@ -15,17 +15,25 @@ class ClienteAgencia {
 		this.pesquisaNomeFantasiaInput = element(by.name("nome_fantasia"));
 		this.pesquisaCNPJInput = element(by.id("cnpj"));
 		this.pesquisarButton = element(by.css("[value='Pesquisar']"));
+        this.nomeFantasiaNaoPreenchidoMessage = element(by.cssContainingText(
+            "p",
+            "O campo Nome fantasia não foi preenchido."
+        ));
+        this.razaoSocialNaoPreenchidaMessage = element(by.cssContainingText(
+            "p",
+            "O campo Razão social não foi preenchido." 
+        ));
 	};
 
 	preencherCamposDeCadastroClienteAgencia(razaoSocial = "", nomeFantasia = "", email = "") {
-		helper.fillFieldWithTextWhenVisible(this.razaoSocialInput, razaoSocial);
-		helper.fillFieldWithTextWhenVisible(this.nomeFantasiaInput, nomeFantasia);
-		helper.fillFieldWithTextWhenVisible(this.emailInput, email);
-		helper.clickWhenClickable(this.adicionarButton);
+		Helper.fillFieldWithTextWhenVisible(this.razaoSocialInput, razaoSocial);
+		Helper.fillFieldWithTextWhenVisible(this.nomeFantasiaInput, nomeFantasia);
+		Helper.fillFieldWithTextWhenVisible(this.emailInput, email);
+		Helper.clickWhenClickable(this.adicionarButton);
 	};
 
 	acessarAdicionarClienteAgencia() {
-		helper.clickWhenClickable(this.adicionarClienteAgenciaButton);
+		Helper.clickWhenClickable(this.adicionarClienteAgenciaButton);
 	};
 
 	cadastrarCliente(razaoSocial = "", nomeFantasia = "", email = "") {
@@ -35,20 +43,20 @@ class ClienteAgencia {
 
 	cadastrarAgencia(razaoSocial = "", nomeFantasia = "", email = "") {
 		this.acessarAdicionarClienteAgencia();
-		helper.clickWhenClickable(this.agenciaRadio);
+		Helper.clickWhenClickable(this.agenciaRadio);
 		this.preencherCamposDeCadastroClienteAgencia(razaoSocial, nomeFantasia, email);
 	};
 
 	pesquisarClienteAgencia(NomeFantasia = "", CNPJ = "") {
-		helper.clearFieldWhenVisibleAndFillItWithText(
+		Helper.clearFieldWhenVisibleAndFillItWithText(
             this.pesquisaNomeFantasiaInput,
             NomeFantasia
         );
-		helper.clearFieldWhenVisibleAndFillItWithText(
+		Helper.clearFieldWhenVisibleAndFillItWithText(
 			this.pesquisaCNPJInput,
 			CNPJ
 		);
-		helper.clickWhenClickable(this.pesquisarButton);
+		Helper.clickWhenClickable(this.pesquisarButton);
 	};
 };
 

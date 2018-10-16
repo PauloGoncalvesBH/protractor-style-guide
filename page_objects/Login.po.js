@@ -1,6 +1,6 @@
 "use strict"
 
-const helper = require("protractor-helper");
+const Helper = require("protractor-helper");
 
 class Login {
 	constructor() {
@@ -14,9 +14,9 @@ class Login {
 	}
 
 	fillFormAndSubmit(usuario = "", senha = "") {
-		helper.fillFieldWithTextWhenVisible(this.usuarioInput, usuario);
-		helper.fillFieldWithTextWhenVisible(this.senhaInput, senha);
-		helper.clickWhenClickable(this.entrarButton);
+		Helper.fillFieldWithTextWhenVisible(this.usuarioInput, usuario);
+		Helper.fillFieldWithTextWhenVisible(this.senhaInput, senha);
+		Helper.clickWhenClickable(this.entrarButton);
 	}
 }
 
