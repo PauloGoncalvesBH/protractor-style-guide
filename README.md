@@ -16,7 +16,7 @@
 
 **1** - Faça um clone do repositório.
 
-**2** - Abra o _Prompt de Comando_, vá até o diretório _QA-4YouSee_ e digite o seguinte comando para instalar as dependências:
+**2** - Abra o _Prompt de Comando_, vá até o diretório _protractor-exemplo_ e digite o seguinte comando para instalar as dependências:
 ```sh
   npm install
 ```
