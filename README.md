@@ -1,4 +1,4 @@
-![picture alt](https://raw.githubusercontent.com/PauloGoncalvesBH/QA-4YouSee/a4417ae184a0d87587fbc0209634ef19affec7f4/images/protractor-pequeno.png)
+![picture alt](https://raw.githubusercontent.com/PauloGoncalvesBH/protractor-exemplo/a4417ae184a0d87587fbc0209634ef19affec7f4/images/protractor-pequeno.png)
 
 # Protractor exemplo
 
