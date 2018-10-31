@@ -8,7 +8,9 @@
 
 - [Node.js](https://nodejs.org/en/download/).
 
-- Adicionar as seguintes variáveis de ambiente do usuário com seus respectivos valores: `USUARIO` e `SENHA`.
+- Adicionar as seguintes variáveis de ambiente do usuário:
+  - Variável `USUARIO` com o valor _avaliacao_
+  - Variável `SENHA` com o valor _4yousee_
 
 ## Passos para executar os testes
 
