@@ -36,7 +36,7 @@ class ClienteAgencia {
     Helper.clickWhenClickable(this.adicionarClienteAgenciaButton)
   };
 
-  cadastrarCliente (razaoSocial = '', nomeFantasia = '', email = '') {
+  cadastrarCliente ({razaoSocial = '', nomeFantasia = '', email = ''}) {
     this.acessarAdicionarClienteAgencia()
     this.preencherCamposDeCadastroClienteAgencia(razaoSocial, nomeFantasia, email)
   };
