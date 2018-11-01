@@ -33,13 +33,13 @@ cd protractor-exemplo
 **3** - Digite o seguinte comando para instalar as dependências e rodar os testes:
 
 ```sh
-  npm install-test
+npm install-test
 ```
 
 **Caso você seguiu os passos acima e queira rodar os testes novamente, digite o comando:**
 
 ```sh
-  npm test
+npm test
 ```
 
 ## Resultado dos testes
