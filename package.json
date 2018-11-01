@@ -1,17 +1,18 @@
 {
-  "name": "4yousee",
+  "name": "protractor-exemplo",
   "version": "1.0.0",
-  "description": "Automação para vaga de QA na 4YouSee",
+  "description": "Projeto exemplo de automação utilizando o Protractor",
   "main": "index.js",
   "scripts": {
     "test": "webdriver-manager update && protractor"
   },
   "keywords": [
-    "protractor"
+    "protractor",
+    "e2e"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/PauloGoncalvesBH/QA-4YouSee.git"
+    "url": "https://github.com/PauloGoncalvesBH/protractor-exemplo.git"
   },
   "author": "Paulo Henrique Rocha Gonçalves <paulorochag@hotmail.com>",
   "license": "ISC",

@@ -1,32 +1,46 @@
-![picture alt](https://raw.githubusercontent.com/PauloGoncalvesBH/protractor-exemplo/a4417ae184a0d87587fbc0209634ef19affec7f4/images/protractor-pequeno.png)
-
 # Protractor exemplo
+
+![picture alt](https://raw.githubusercontent.com/PauloGoncalvesBH/protractor-exemplo/a4417ae184a0d87587fbc0209634ef19affec7f4/images/protractor-pequeno.png)
 
  Projeto exemplo de automação utilizando o Protractor.
 
-## Pré-requisito
+## Pré-requisitos
 
-- [Node.js](https://nodejs.org/en/download/).
+- [Node.js](https://nodejs.org/en/download/) instalado.
 
 - Adicionar as seguintes variáveis de ambiente do usuário:
   - Variável `USUARIO` com o valor _avaliacao_
   - Variável `SENHA` com o valor _4yousee_
 
-## Passos para executar os testes
+## Instalando as dependências e executando os testes
 
-**1** - Faça um clone do repositório.
+ Os testes serão executados em modo [headless](https://developers.google.com/web/updates/2017/04/headless-chrome), ou seja, sem a interface gráfica.
 
-**2** - Abra o _Prompt de Comando_, vá até o diretório _protractor-exemplo_ e digite o seguinte comando para instalar as dependências:
+ Todos os comandos abaixo são feitos no _prompt de comando_.
+
+**1** - Faça um clone do repositório:
+
 ```sh
-  npm install
+git clone https://github.com/PauloGoncalvesBH/protractor-exemplo.git
 ```
-  
-**3** - Para rodar os testes digite o comando:
+
+**2** - Acesse o diretório protractor-exemplo criado pelo clone.
+
+```sh
+cd protractor-exemplo
+```
+
+**3** - Digite o seguinte comando para instalar as dependências e rodar os testes:
+
+```sh
+  npm install-test
+```
+
+**Caso você seguiu os passos acima e queira rodar os testes novamente, digite o comando:**
+
 ```sh
   npm test
 ```
-
- **Os testes serão executados em modo [headless](https://developers.google.com/web/updates/2017/04/headless-chrome), ou seja, sem a interface gráfica.**
 
 ## Resultado dos testes
 
@@ -50,7 +64,7 @@ Jasmine started
 4 specs, 0 failures
 Finished in 35.686 seconds
 
-Randomized with seed 
+Randomized with seed
 Executed 4 of 4 specs SUCCESS in 36 secs.
 Randomized with seed .
 
