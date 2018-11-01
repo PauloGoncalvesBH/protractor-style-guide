@@ -6,7 +6,7 @@
 
 ## Pré-requisitos
 
-- [Node.js](https://nodejs.org/en/download/) instalado.
+- [Git](https://git-scm.com/download/) e [Node.js](https://nodejs.org/en/download/) instalados.
 
 - Adicionar as seguintes variáveis de ambiente do usuário:
   - Variável `USUARIO` com o valor _avaliacao_
