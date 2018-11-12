@@ -1,7 +1,7 @@
 'use strict'
 
 const SpecReporter = require('jasmine-spec-reporter').SpecReporter
-const Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter')
+const AllureReporter = require('jasmine-allure-reporter');
 
 module.exports.config = {
   baseUrl: 'http://homologacao.4yousee.com.br/admin/',
@@ -33,13 +33,15 @@ module.exports.config = {
       displaySuiteNumber: true,
       displaySpecDuration: true
     }))
-    jasmine.getEnv().addReporter(new Jasmine2HtmlReporter({
-      takeScreenshots: true,
-      savePath: 'report/',
-      fileNameDateSuffix: true,
-      cleanDestination: true,
-      takeScreenshotsOnlyOnFailures: true
-    }))
+    jasmine.getEnv().addReporter(new AllureReporter());
+    jasmine.getEnv().afterEach(function(done){
+      browser.takeScreenshot().then(function (png) {
+        allure.createAttachment('Screenshot', function () {
+          return new Buffer(png, 'base64')
+        }, 'image/png')();
+        done();
+      })
+    });
   },
   jasmineNodeOpts: {
     random: true

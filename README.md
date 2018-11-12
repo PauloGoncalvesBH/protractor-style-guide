@@ -44,9 +44,21 @@ npm install-test
 npm test
 ```
 
+O comando `npm test` realiza as seguintes ações:
+
+1. Atualiza os drivers dos navegadores e do Selenium.
+2. Exclui o diretório `allure-report` caso exista.
+3. Roda os testes apontados no arquivo `protractor.conf.js`.
+4. Gera um XML de resultado no diretório `allure-results`.
+5. Gera um report HTML no diretório 'allure-report' com base no XML.
+
 ## Resultado dos testes
 
-- É gerado um report HTML dentro do diretório _report/_.
+- Digite o seguinte comando para abrir o report HTML gerado pelo plugin da [Allure](https://github.com/allure-framework/allure-jasmine):
+
+```sh
+npm run allure-report
+```
 
 - Você verá um resultado parecido com esse no _Prompt de Comando_:
 

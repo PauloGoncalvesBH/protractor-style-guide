@@ -4,7 +4,10 @@
   "description": "Projeto exemplo de automação utilizando o Protractor",
   "main": "index.js",
   "scripts": {
-    "test": "webdriver-manager update && protractor"
+    "pretest": "webdriver-manager update && if exist allure-report rmdir allure-report /s /q",
+    "test": "protractor",
+    "posttest": "allure generate allure-results --clean -o allure-report || true",
+    "allure-report": "allure serve"
   },
   "keywords": [
     "protractor",
@@ -17,10 +20,13 @@
   "author": "Paulo Henrique Rocha Gonçalves <paulorochag@hotmail.com>",
   "license": "ISC",
   "dependencies": {
+    "jasmine-allure-reporter": "^1.0.2",
     "jasmine-spec-reporter": "^4.2.1",
     "protractor": "^5.4.1",
     "protractor-helper": "^3.6.6",
-    "protractor-jasmine2-html-reporter": "0.0.7",
     "shortid": "^2.2.14"
+  },
+  "devDependencies": {
+    "allure-commandline": "^2.7.0"
   }
 }
