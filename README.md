@@ -50,7 +50,7 @@ O comando `npm test` realiza as seguintes ações:
 2. Exclui o diretório `allure-report/` caso exista.
 3. Roda os testes apontados no arquivo `protractor.conf.js`.
 4. Gera um XML de resultado no diretório `allure-results/`.
-5. Gera um report HTML no diretório 'allure-report' com base no XML.
+5. Gera um report HTML no diretório `allure-report/` com base no XML.
 
 ## Resultado dos testes
 
