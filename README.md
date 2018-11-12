@@ -16,51 +16,49 @@
 
 ## Instalando as dependências e executando os testes
 
- Os testes serão executados em modo [headless](https://developers.google.com/web/updates/2017/04/headless-chrome), ou seja, sem a interface gráfica.
+ Os testes serão executados em modo [headless](https://developers.google.com/web/updates/2017/04/headless-chrome), ou seja, sem que o browser abra a interface gráfica.
 
  Todos os comandos abaixo são feitos no _prompt de comando_.
 
-**1** - Faça um clone do repositório:
+**1** - Faça um clone do repositório e acesse o diretório criado pelo clone:
 
 ```sh
-git clone https://github.com/PauloGoncalvesBH/protractor-exemplo.git
+git clone https://github.com/PauloGoncalvesBH/protractor-exemplo.git && cd protractor-exemplo
 ```
 
-**2** - Acesse o diretório protractor-exemplo criado pelo clone.
+**2** - Instale as dependências do projeto:
 
 ```sh
-cd protractor-exemplo
+npm install
 ```
 
-**3** - Digite o seguinte comando para instalar as dependências e rodar os testes:
-
-```sh
-npm install-test
-```
-
-**Caso você seguiu os passos acima e queira rodar os testes novamente, digite o comando:**
+**3** - E por fim, digite o seguinte comando para rodar os testes:
 
 ```sh
 npm test
 ```
 
-O comando `npm test` realiza as seguintes ações:
-
-1. Atualiza os drivers dos navegadores e do Selenium.
-2. Exclui o diretório `allure-report/` caso exista.
-3. Roda os testes apontados no arquivo `protractor.conf.js`.
-4. Gera um XML de resultado no diretório `allure-results/`.
-5. Gera um report HTML no diretório `allure-report/` com base no XML.
+> O comando `npm test` realiza as seguintes ações:
+>
+>1. Atualiza os drivers dos navegadores e do Selenium.
+>2. Exclui o diretório `allure-report/` caso exista.
+>3. Roda os testes apontados no arquivo `protractor.conf.js`.
+>4. Gera um XML de resultado no diretório `allure-results/`.
+>5. Gera um report HTML no diretório `allure-report/` com base no XML.
 
 ## Resultado dos testes
 
-- Digite o seguinte comando para abrir o report HTML gerado pelo plugin da [Allure](https://github.com/allure-framework/allure-jasmine):
+Há dois modos de verificar o resultado dos testes:
+
+1. Abrindo o report HTML gerado pelo plugin da [Allure](https://github.com/allure-framework/allure-jasmine), digitando o seguinte comando:
 
 ```sh
 npm run report
 ```
 
-- Você verá um resultado parecido com esse no _Prompt de Comando_:
+2. Pelo prompt de comando, aonde você verá um resultado parecido com esse ao fim da execução dos testes:
+
+<details><p><summary>Abra para ver o resultado no prompt de comando</summary>
 
 ```sh
 Started
@@ -86,3 +84,11 @@ Randomized with seed .
 [15:34:18] I/launcher - 0 instance(s) of WebDriver still running
 [15:34:18] I/launcher - chrome #01 passed
 ```
+
+</p> </details>
+
+## Principais dependências
+
+- [Allure Test Reporter](https://www.npmjs.com/package/jasmine-allure-reporter)
+- [Protractor](https://www.npmjs.com/package/protractor)
+- [Protractor-Helper](https://www.npmjs.com/package/protractor-helper)
