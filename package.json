@@ -7,7 +7,7 @@
     "pretest": "webdriver-manager update && if exist allure-report rmdir allure-report /s /q",
     "test": "protractor",
     "posttest": "allure generate allure-results --clean -o allure-report || true",
-    "allure-report": "allure serve"
+    "report": "allure serve"
   },
   "keywords": [
     "protractor",
