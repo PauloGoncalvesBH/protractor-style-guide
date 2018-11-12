@@ -23,7 +23,7 @@
     "jasmine-allure-reporter": "^1.0.2",
     "jasmine-spec-reporter": "^4.2.1",
     "protractor": "^5.4.1",
-    "protractor-helper": "^3.6.6",
+    "protractor-helper": "^3.6.10",
     "shortid": "^2.2.14"
   },
   "devDependencies": {
