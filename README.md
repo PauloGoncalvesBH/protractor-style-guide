@@ -58,7 +58,7 @@ npm run report
 
 2. Pelo prompt de comando, aonde você verá um resultado parecido com esse ao fim da execução dos testes:
 
-<details><p><summary>Abra para ver o resultado no prompt de comando</summary>
+<details><p><summary>Abra para ver exemplo de resultado no prompt de comando</summary>
 
 ```sh
 Started
