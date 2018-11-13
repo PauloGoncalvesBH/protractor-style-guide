@@ -28,10 +28,18 @@ module.exports.config = {
   onPrepare: () => {
     browser.ignoreSynchronization = true
     jasmine.getEnv().addReporter(new SpecReporter({
-      displayFailuresSummary: true,
-      displayFailedSpec: true,
-      displaySuiteNumber: true,
-      displaySpecDuration: true
+      suite: {
+        displayNumber: true
+      },
+      spec: {
+        displayFailed: true,
+        displayPending: true,
+        displayDuration: true,
+        displayStackTrace: true
+      },
+      summary: {
+        displayFailed: true
+      }
     }))
     jasmine.getEnv().addReporter(new AllureReporter());
     jasmine.getEnv().afterEach(function(done){
@@ -44,6 +52,7 @@ module.exports.config = {
     });
   },
   jasmineNodeOpts: {
-    random: true
+    random: true,
+    print: function() {}
   }
 }

@@ -16,12 +16,12 @@ describe('Testes de Cadastro de Agência e Cliente', () => {
 
   afterEach(() => browser.driver.manage().deleteAllCookies())
 
-  it('Validar que o cadastro de um cliente utilizando apenas campos obrigatórios é realizado com sucesso', () => {
+  xit('Validar que o cadastro de um cliente utilizando apenas campos obrigatórios é realizado com sucesso', () => {
     const caracterAleatorio = ShortId.generate()
 
     ClienteAgenciaPage.cadastrarCliente({razaoSocial: 'Razão Social ' + caracterAleatorio, nomeFantasia: 'Nome Fantasia ' + caracterAleatorio})
     ClienteAgenciaPage.pesquisarClienteAgencia('Nome Fantasia Automação' + caracterAleatorio)
-  })
+  }).pend("Necessita de criar a validação.")
 
   it("Validar que é impedido de cadastrar um cliente ao deixar de preencher o campo obrigatório 'Nome Fantasia'", () => {
     ClienteAgenciaPage.cadastrarCliente({razaoSocial: 'Razão Social Automação'})
