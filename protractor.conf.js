@@ -22,7 +22,6 @@ module.exports.config = {
       senha: "4yousee"
     }
   },
-  // highlightDelay: 1000,
   onPrepare: () => {
     browser.ignoreSynchronization = true
     jasmine.getEnv().addReporter(new SpecReporter({

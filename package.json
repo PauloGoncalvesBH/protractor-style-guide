@@ -1,7 +1,7 @@
 {
-  "name": "protractor-exemplo",
+  "name": "protractor-style-guide",
   "version": "1.0.0",
-  "description": "Projeto exemplo de automação utilizando o Protractor",
+  "description": "Guia de estilo de automação utilizando o Protractor",
   "main": "index.js",
   "scripts": {
     "pretest": "webdriver-manager update && if exist allure-report rmdir allure-report /s /q",
