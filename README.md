@@ -39,7 +39,7 @@ npm test
 
 Há dois modos de verificar o resultado dos testes:
 
-1. Abrindo o report HTML gerado pelo plugin da [Allure](https://github.com/allure-framework/allure-jasmine), digitando o seguinte comando:
+1. Através do report HTML, digitando o seguinte comando:
 
 ```sh
 npm run report
