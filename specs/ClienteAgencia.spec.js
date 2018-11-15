@@ -9,12 +9,11 @@ const LoginPage = require('../page_objects/Login.po.js')
 
 describe('Testes de Cadastro de Agência e Cliente', () => {
   beforeEach(() => {
+    browser.driver.manage().deleteAllCookies()
     LoginPage.visit()
     LoginPage.fillFormAndSubmit(browser.params.login.usuario, browser.params.login.senha)
     HomePage.acessarClienteAgencia()
   })
-
-  afterEach(() => browser.driver.manage().deleteAllCookies())
 
   xit('Validar que o cadastro de um cliente utilizando apenas campos obrigatórios é realizado com sucesso', () => {
     const caracterAleatorio = ShortId.generate()
