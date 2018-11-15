@@ -10,10 +10,6 @@
 
 - [Git](https://git-scm.com/download/) e [Node.js](https://nodejs.org/en/download/) instalados.
 
-- Adicionar as seguintes variáveis de ambiente do usuário:
-  - Variável `USUARIO` com o valor _avaliacao_
-  - Variável `SENHA` com o valor _4yousee_
-
 ## Instalando as dependências e executando os testes
 
  Os testes serão executados em modo [headless](https://developers.google.com/web/updates/2017/04/headless-chrome), ou seja, sem que o browser abra a interface gráfica.

@@ -17,11 +17,9 @@ module.exports.config = {
     }
   },
   params: {
-    // Os valores de USUARIO e SENHA são definidos como variável de ambiente do usuário.
-    // Isso é para garantir segurança, não versionando informações privadas.
     login: {
-      usuario: process.env.USUARIO,
-      senha: process.env.SENHA
+      usuario: "avaliacao",
+      senha: "4yousee"
     }
   },
   // highlightDelay: 1000,
