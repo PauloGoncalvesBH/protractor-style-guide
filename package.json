@@ -23,10 +23,10 @@
     "jasmine-allure-reporter": "^1.0.2",
     "jasmine-spec-reporter": "^4.2.1",
     "protractor": "^5.4.1",
-    "protractor-helper": "^3.6.10",
+    "protractor-helper": "^3.6.13",
     "shortid": "^2.2.14"
   },
   "devDependencies": {
-    "allure-commandline": "^2.7.0"
+    "allure-commandline": "^2.8.1"
   }
 }
