@@ -29,10 +29,7 @@
     "protractor": "^5.4.1",
     "protractor-helper": "^3.6.13",
     "shortid": "^2.2.14",
-    "allure-commandline": "^2.8.1"
-  },
-  "devDependencies": {
+    "allure-commandline": "^2.8.1",
     "pre-commit": "^1.2.2",
     "prettier": "^1.15.2"
-  }
 }
