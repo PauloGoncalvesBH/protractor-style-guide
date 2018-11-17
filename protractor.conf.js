@@ -3,19 +3,15 @@
 const SpecReporter = require("jasmine-spec-reporter").SpecReporter;
 const AllureReporter = require("jasmine-allure-reporter");
 
+const constants = require("./samplePage/constant.js");
+
 module.exports.config = {
-  baseUrl: "http://homologacao.4yousee.com.br/admin/",
+  baseUrl: constants.BASE_URL,
   specs: ["specs/*.spec.js"],
   capabilities: {
     browserName: "chrome",
     chromeOptions: {
       args: ["--headless", "--disable-gpu", "--window-size=1024,768"]
-    }
-  },
-  params: {
-    login: {
-      usuario: "avaliacao",
-      senha: "4yousee"
     }
   },
   onPrepare: () => {

@@ -1,51 +1,51 @@
 # Protractor Style Guide
 
-[[Português - BR]](./docs/README.PT-BR.md)
+[[English]](../README.md)
 
 [![library: protractor-helper](https://img.shields.io/badge/library-protractor--helper-blue.svg)](https://www.npmjs.com/package/protractor-helper)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://www.npmjs.com/package/prettier)
 
-Automation style guide using Protractor and Protractor-helper
+Guia de estilo de automação utilizando o Protractor
 
-## Prerequisites
+## Pré-requisitos
 
-- [Git](https://git-scm.com/download/) and [Node.js](https://nodejs.org/en/download/) installeds.
+- [Git](https://git-scm.com/download/) e [Node.js](https://nodejs.org/en/download/) instalados.
 
-## Installing dependencies and running tests
+## Instalando as dependências e executando os testes
 
-The tests will run in [headless mode](https://developers.google.com/web/updates/2017/04/headless-chrome), that is, without the browser opening the graphical interface.
+Os testes serão executados em [modo headless](https://developers.google.com/web/updates/2017/04/headless-chrome), ou seja, sem que o browser abra a interface gráfica.
 
-All the commands below are done in the _prompt of command_.
+Todos os comandos abaixo são feitos no _prompt de comando_.
 
-**1** - Make a clone of the repository and access the directory created by the clone:
+**1** - Faça um clone do repositório e acesse o diretório criado pelo clone:
 
 ```sh
 git clone https://github.com/PauloGoncalvesBH/protractor-exemplo.git && cd protractor-exemplo
 ```
 
-**2** - Install the project dependencies:
+**2** - Instale as dependências do projeto:
 
 ```sh
 npm install
 ```
 
-**3** - And finally, enter the following command to run the tests:
+**3** - E por fim, digite o seguinte comando para rodar os testes:
 
 ```sh
 npm test
 ```
 
-## Test result
+## Resultado dos testes
 
-There are two ways to check the test results:
+Há dois modos de verificar o resultado dos testes:
 
-1. Through the HTML report, enter the following command:
+1. Através do report HTML, digitando o seguinte comando:
 
 ```sh
 npm run report
 ```
 
-2. From the command prompt, where you will see a similar result at the end of the test run:
+2. Pelo prompt de comando, aonde você verá um resultado parecido com esse ao fim da execução dos testes:
 
 ```sh
 > protractor-style-guide@1.0.0 test c:\protractor-style-guide
