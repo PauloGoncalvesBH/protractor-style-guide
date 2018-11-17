@@ -22,7 +22,7 @@
     "url": "https://github.com/PauloGoncalvesBH/protractor-exemplo.git"
   },
   "author": "Paulo Henrique Rocha Gonçalves <paulorochag@hotmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "jasmine-allure-reporter": "^1.0.2",
     "jasmine-spec-reporter": "^4.2.1",
