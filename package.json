@@ -15,7 +15,9 @@
   ],
   "keywords": [
     "protractor",
-    "e2e"
+    "protractor-helper",
+    "e2e",
+    "style-guide"
   ],
   "repository": {
     "type": "git",
