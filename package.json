@@ -1,14 +1,14 @@
 {
   "name": "protractor-style-guide",
   "version": "1.0.0",
-  "description": "Guia de estilo de automação utilizando o Protractor",
+  "description": "Automation guide style using protractor and protractor-helper",
   "main": "index.js",
   "scripts": {
     "pretest": "webdriver-manager update && if exist allure-report rmdir allure-report /s /q",
     "test": "protractor",
     "posttest": "allure generate allure-results --clean -o allure-report || true",
     "report": "allure serve",
-    "prettify": "prettier --write *.js page_objects/*.js specs/*.js"
+    "prettify": "prettier --write *.js page_objects/*.js specs/*.js samplePage/assets/js/*.js"
   },
   "pre-commit": [
     "prettify"
@@ -21,15 +21,15 @@
     "type": "git",
     "url": "https://github.com/PauloGoncalvesBH/protractor-exemplo.git"
   },
-  "author": "Paulo Henrique Rocha Gonçalves <paulorochag@hotmail.com>",
+  "author": "Paulo Henrique Rocha Gonçalves <paulorochag@hotmail.com> (https://linkedin.com/in/paulo-goncalves)",
   "license": "MIT",
   "dependencies": {
-    "jasmine-allure-reporter": "^1.0.2",
-    "jasmine-spec-reporter": "^4.2.1",
     "protractor": "^5.4.1",
     "protractor-helper": "^3.6.13",
-    "shortid": "^2.2.14",
+    "jasmine-allure-reporter": "^1.0.2",
     "allure-commandline": "^2.8.1",
+    "jasmine-spec-reporter": "^4.2.1",
+    "shortid": "^2.2.14",
     "pre-commit": "^1.2.2",
     "prettier": "^1.15.2"
   }
