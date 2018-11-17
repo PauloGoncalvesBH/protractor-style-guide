@@ -1,11 +1,11 @@
 # Protractor Style Guide
 
-[[English]](../README.md)
-
 [![library: protractor-helper](https://img.shields.io/badge/library-protractor--helper-blue.svg)](https://www.npmjs.com/package/protractor-helper)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://www.npmjs.com/package/prettier)
 
 Guia de estilo de automação utilizando o Protractor
+
+[[English]](../README.md)
 
 ## Pré-requisitos
 
