@@ -1,6 +1,6 @@
 {
   "name": "protractor-style-guide",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Automation style guide using protractor and protractor-helper",
   "main": "index.js",
   "scripts": {
