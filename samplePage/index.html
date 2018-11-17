@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!--[if (IE 9)|(IE 10)]>
+      <link rel="stylesheet" href="assets/css/backupStyle.css" />
+    <![endif]-->
+    <title>Sample page</title>
+  </head>
+
+  <body>
+    <nav>
+      <header class="nav-header">
+        <h1>Protractor Style Guide</h1>
+        <div class="menuTrigger-responsive">
+          <i class="material-icons menu-trigger">menu</i>
+        </div>
+      </header>
+      <div class="nav-content" id="main-menu">
+        <div class="nav-top-list">
+          <a
+            href="https://github.com/PauloGoncalvesBH/protractor-style-guide"
+            target="_blank"
+            >Github</a
+          >
+          <a href="#">Career</a> <a href="#">Internal</a>
+        </div>
+        <ul class="nav-bottom-list">
+          <li class="dropdown-link">
+            <a href="#" id="dropdown-trigger">Products</a>
+            <div id="dropdown-list" class="hide">
+              <div class="triangle"></div>
+              <ul class="dropdown-list">
+                <li><a href="#">Integer</a></li>
+                <li><a href="#">Pulvinar consectetur</a></li>
+                <li><a href="#">Oget mauris praesent</a></li>
+                <li><a href="#">Interdum justo</a></li>
+                <li><a href="#">Nec neque fringilla</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Adress</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main class="flex-wraper">
+      <div class="page-left">
+        <article class="main-article">
+          <h2>The boss are crazy</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu
+            odio ut tortor aliquet tincidunt. Aliquam lorem sapien, pretium vel
+            justo sed, mattis faucibus leo. Nulla purus tortor, efficitur sed
+            egestas in, cursus id orci. Interdum et malesuada fames ac.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel
+            libero iaculis, blandit risus vel, hendrerit nisl. Nunc imperdiet
+            tincidunt risus, ac commodo nisl molestie id. Integer commodo eu
+            odio nec laoreet. In venenatis, orci sed aliquet hendrerit, ex leo.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+            elementum dui vitae ipsum dictum laoreet. Mauris eu ipsum ut dui
+            laoreet convallis. Nullam auctor semper nisi, a pretium mauris
+            tincidunt vel. Interdum et malesuada fames ac ante ipsum primis in.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis
+            sagittis sapien, vitae molestie purus. Maecenas convallis aliquet
+            aliquam. Suspendisse ornare molestie enim, at consequat tellus
+            lobortis et. Nulla et semper leo. Nam pretium ligula nec rutrum
+            lacinia. Praesent condimentum.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+            pretium a ante id vehicula. Donec id fermentum purus, ut faucibus
+            leo. Phasellus porta est erat, at mattis odio sodales eu. Vestibulum
+            rhoncus erat velit, id placerat lacus lobortis in. Sed.
+          </p>
+        </article>
+        <div class="small-article">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis
+            est eu egestas gravida. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Maecenas orci nisi, mollis quis velit id, euismod
+            bibendum sem. Nulla suscipit elit id maximus sagittis. Vestibulum
+            velit.
+          </p>
+        </div>
+        <article class="small-article">
+          <h3>Spoilers</h3>
+          <p>Integer eget mauris et urna</p>
+          <p>Pulvinar consectetur hendrerit</p>
+          <p>Oget mauris praesent</p>
+        </article>
+      </div>
+      <aside class="page-right">
+        <div class="page-right-wrap">
+          <article class="aside-text">
+            <h3>Sign up to win 1 million</h3>
+            <p>
+              Integer eget mauris et urna pulvinar consectetur hendrerit eget
+              mauris. Praesent a interdum justo. Aenean ac diam nec neque
+              fringilla cursus. Donec iaculis tortor in nunc vehicula rutrum.
+              Integer malesuada mollis ligula at varius.
+            </p>
+          </article>
+
+          <form
+            name="myForm"
+            action="#"
+            onsubmit="return validateForm()"
+            method="post"
+          >
+            <div class="form-group">
+              <label>First name:</label>
+              <input
+                placeholder="Enter your first name"
+                type="text"
+                name="firstName"
+              />
+              <span class="error nameError"
+                >Should be 3-20 characters long, can not contain symbols</span
+              >
+            </div>
+            <div class="form-group">
+              <label>Last name:</label>
+              <input
+                placeholder="Enter your last name"
+                type="text"
+                name="lastName"
+              />
+              <span class="error lastNameError"
+                >Should be 3-20 characters long, can not contain symbols</span
+              >
+            </div>
+            <div class="form-group">
+              <label>Message:</label> <textarea name="message"></textarea>
+              <span class="error msgError"
+                >Should be 30-150 characters long, can not contain symbols</span
+              >
+            </div>
+            <button type="submit">SUBMIT</button>
+          </form>
+        </div>
+      </aside>
+      <div class="page-bottom">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta
+          lorem eros, sed malesuada augue lacinia rhoncus. Quisque commodo mi
+          nibh, nec pharetra tellus suscipit ut. Sed eleifend enim libero,
+          varius molestie libero mollis a volutpat.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+          vestibulum tortor sed rhoncus maximus. Aliquam eu varius libero. Duis
+          fermentum imperdiet euismod. Vivamus sollicitudin quis risus sed
+          tempor. Donec vel sem eget urna posuere.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a
+          risus semper, egestas turpis non, blandit felis. Sed fermentum
+          malesuada dapibus. Quisque quis viverra magna. Orci varius natoque
+          penatibus et magnis dis parturient volutpat.
+        </p>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-info">
+        <div class="link-group">
+          <a
+            href="https://github.com/PauloGoncalvesBH/protractor-style-guide"
+            target="_blank"
+            >Github</a
+          >
+          <a href="#">Career</a> <a href="#">Internal</a>
+        </div>
+
+        <p>For protractor-style-guide repository</p>
+      </div>
+      <div class="footer-heading"><h3>Protractor Style Guide</h3></div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+@media screen and (max-width: 1040px) {
+    .page-left {
+        order: 1;
+        flex: 100%;
+    }
+    .page-right {
+        order: 3;
+        flex: 100%;
+        margin-top: 20px;
+    }
+    .page-right-wrap {
+        padding: 0;
+        display: flex;
+        .aside-text {
+            flex: 40%;
+            padding-right: 20px;
+        }
+        form {
+            flex: 50%;
+        }
+    }
+    .page-bottom {
+        order: 2;
+    }
+}
+@media screen and (max-width: 880px) {
+     .page-bottom {
+         padding: 12px 0;
+        p {
+            flex: 100%;
+            padding: 12px 18px;
+        }
+    }
+    nav {
+        padding: 20px 40px;
+    }
+    .flex-wraper {
+        padding: 36px 20px 20px;
+    }
+    footer {
+        padding: 20px;
+    }
+}
+@media screen and (max-width: 715px) {
+    .page-left {
+        .small-article {
+            flex: 100%;
+            margin: 0 0 20px 0;
+        } 
+    }
+    .page-bottom {
+        margin: 0;
+    }
+    .page-right-wrap {
+        flex-wrap: wrap;
+        .aside-text {
+            flex: 100%;
+            padding-right: 20px;
+        }
+        form {
+            flex: 100%;
+        }
+    }
+    footer {
+       .footer-info {
+        flex: 100%;
+    }
+        .footer-heading {
+            flex: 100%;
+            margin-top: 20px;
+            
+        } 
+        h3 {
+            text-align: left;
+        }
+    }
+    
+}
+@media screen and (max-width: 702px) {
+    .nav-top-list {
+        text-align: left;
+        a:first-child {
+            margin: 0;
+        }
+    }
+    .dropdown-link {
+        a:first-of-type {
+            margin: 0;
+        }
+    }
+      .nav-header {
+    flex: 100%;
+    }
+}
+
+@media screen and (max-width: 512px) {
+    .menuTrigger-responsive {
+        display: block;
+    }
+    .nav-header {
+    justify-content: center;
+    }
+    .nav-content {
+    display: none;
+    position: absolute;
+    top: 115px;
+    background-color: $pink;
+    left: 0;
+    right: 0;
+    }
+    .nav-top-list {
+        text-align: center;
+        padding: 10px 0;
+    background-color: #ffffff26;
+    }
+    .nav-bottom-list > li {
+            flex: 100%;
+            text-align: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ffffff1f;
+            a {
+                margin: 0;
+            }
+        }
+    .dropdown-list {
+        left: 32%;
+        top: 42px;
+        z-index: 10;
+    }
+    .triangle {
+        width: 50px;
+        height: 50px;
+        top: 40px;
+        left: 42%;
+    }
+
+}
+@media screen and (max-width: 425px) {
+    nav {
+        padding: 20px;
+    }
+    .flex-wraper {
+        padding: 20px;
+    }
+    footer {
+        padding: 20px;
+    }
+}

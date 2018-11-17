@@ -1,0 +1,15 @@
+@import '_variables', '_nav', '_main', '_footer', '_media';
+body {
+    background-color: #e6e6e6;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+.show {
+    display: block;
+}
+.invalid {
+    border: 1px solid red;
+}
+.valid {
+    border: 1px solid green;
+}

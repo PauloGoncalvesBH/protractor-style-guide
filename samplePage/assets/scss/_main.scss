@@ -1,0 +1,119 @@
+p {
+    color: #4b4b4b;
+    margin: 0;
+}
+.flex-wraper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 36px 70px 20px 70px;
+    line-height: 1.4em;
+    h2, h3 {
+     font-family: $timesNewR;
+}
+}
+.page-bottom {
+    flex: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ccc;
+    margin-top: 20px;
+    p {
+        flex: 28%;
+        padding: 24px 18px;
+    }
+}
+.page-left {
+    flex: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.page-right {
+    flex: 30%;
+    h3 {
+        margin: 0;
+        font-size: 24px;
+    }
+}
+.main-article {
+    background-color: #fff;
+    flex: 100%;
+    margin-bottom: 20px;
+    h2 {
+        font-size: 32px;
+        line-height: 1em;
+        margin: 24px 18px 20px;
+    }
+    p {
+        font-size: 16px;
+        color: #4d4d4d;
+        margin: 0 18px 30px;
+    }
+}
+.small-article {
+    background-color: #fff;
+    flex: 42%;
+    padding: 24px 18px;
+    p, h3 {
+        margin: 0;
+    }
+}
+div.small-article {
+    margin-right: 20px;
+}
+article.small-article {
+    h3 {
+        font-size: 20px;
+    }
+    p {
+       padding: 10px 0;
+       border-bottom: 1px solid #ccc;
+       color: #0071bc;
+    }
+    p:last-child {
+        border: none;
+    }
+}
+.page-right-wrap {
+    padding: 0 0 0 20px;
+    p {
+        border-top: 2px solid black;
+        padding-top: 16px;
+        margin: 20px 0;
+    }
+}
+form {
+    border: 1px solid #898989;
+    padding: 20px;
+    input {
+        width: 100%;
+        height: 30px;
+        
+    }
+    input::placeholder {
+padding-left: 10px;
+    }
+    textarea {
+        width: 100%;
+        min-height: 130px;
+        resize: none;
+    }
+}
+.form-group {
+    margin-bottom: 20px;
+}
+button {
+    color: #fff;
+    background-color: $pink;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    letter-spacing: 0.2em;
+    font-family: 'Ubuntu', sans-serif;
+}
+.error {
+    color: #4b4b4b;
+    font-style: italic;
+    display: none;
+    font-size: 14px;
+    line-height: initial;
+}
