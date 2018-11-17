@@ -3,7 +3,7 @@
 [![library: protractor-helper](https://img.shields.io/badge/library-protractor--helper-blue.svg)](https://www.npmjs.com/package/protractor-helper)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://www.npmjs.com/package/prettier)
 
-Guia de estilo de automação utilizando o Protractor
+Guia de estilo de automação utilizando o Protractor e o [Protractor-helper](https://www.npmjs.com/package/protractor-helper)
 
 [[English]](../README.md)
 
@@ -20,7 +20,7 @@ Todos os comandos abaixo são feitos no _prompt de comando_.
 **1** - Faça um clone do repositório e acesse o diretório criado pelo clone:
 
 ```sh
-git clone https://github.com/PauloGoncalvesBH/protractor-exemplo.git && cd protractor-exemplo
+git clone https://github.com/PauloGoncalvesBH/protractor-style-guide.git && cd protractor-exemplo
 ```
 
 **2** - Instale as dependências do projeto:

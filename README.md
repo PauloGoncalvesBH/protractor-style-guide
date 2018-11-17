@@ -3,7 +3,7 @@
 [![library: protractor-helper](https://img.shields.io/badge/library-protractor--helper-blue.svg)](https://www.npmjs.com/package/protractor-helper)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://www.npmjs.com/package/prettier)
 
-Automation style guide using Protractor and Protractor-helper
+Automation style guide using Protractor and [Protractor-helper](https://www.npmjs.com/package/protractor-helper)
 
 [[Português - BR]](./docs/README.PT-BR.md)
 
@@ -15,12 +15,12 @@ Automation style guide using Protractor and Protractor-helper
 
 The tests will run in [headless mode](https://developers.google.com/web/updates/2017/04/headless-chrome), that is, without the browser opening the graphical interface.
 
-All the commands below are done in the _prompt of command_.
+All the commands below are done in the _command prompt_.
 
 **1** - Make a clone of the repository and access the directory created by the clone:
 
 ```sh
-git clone https://github.com/PauloGoncalvesBH/protractor-exemplo.git && cd protractor-exemplo
+git clone https://github.com/PauloGoncalvesBH/protractor-style-guide.git && cd protractor-exemplo
 ```
 
 **2** - Install the project dependencies:
