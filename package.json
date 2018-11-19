@@ -4,7 +4,10 @@
   "description": "Automation style guide using protractor and protractor-helper",
   "main": "index.js",
   "scripts": {
-    "pretest": "webdriver-manager update && if exist allure-report rmdir allure-report /s /q",
+    "remove-report": "run-script-os",
+    "remove-report:win32": "if exist allure-report rmdir allure-report /s /q",
+    "remove-report:linux": "rm -f allure-report",
+    "pretest": "webdriver-manager update && npm run remove-report",
     "test": "protractor",
     "posttest": "allure generate allure-results --clean -o allure-report || true",
     "report": "allure serve",
@@ -26,12 +29,13 @@
   "author": "Paulo Henrique Rocha Gonçalves <paulorochag@hotmail.com> (https://linkedin.com/in/paulo-goncalves)",
   "license": "MIT",
   "dependencies": {
-    "protractor": "^5.4.1",
-    "protractor-helper": "^3.6.13",
-    "jasmine-allure-reporter": "^1.0.2",
     "allure-commandline": "^2.8.1",
+    "jasmine-allure-reporter": "^1.0.2",
     "jasmine-spec-reporter": "^4.2.1",
     "pre-commit": "^1.2.2",
-    "prettier": "^1.15.2"
+    "prettier": "^1.15.2",
+    "protractor": "^5.4.1",
+    "protractor-helper": "^3.6.13",
+    "run-script-os": "^1.0.3"
   }
 }
