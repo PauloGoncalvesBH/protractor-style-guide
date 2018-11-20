@@ -13,8 +13,6 @@ Guia de estilo de automação utilizando o Protractor e o [Protractor-helper](ht
 
 ## Instalando as dependências e executando os testes
 
-Os testes serão executados em [modo headless](https://developers.google.com/web/updates/2017/04/headless-chrome), ou seja, sem que o browser abra a interface gráfica.
-
 Todos os comandos abaixo são feitos no _prompt de comando_.
 
 **1** - Faça um clone do repositório e acesse o diretório criado pelo clone:

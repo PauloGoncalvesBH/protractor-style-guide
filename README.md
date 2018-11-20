@@ -13,8 +13,6 @@ Automation style guide using Protractor and [Protractor-helper](https://www.npmj
 
 ## Installing dependencies and running tests
 
-The tests will run in [headless mode](https://developers.google.com/web/updates/2017/04/headless-chrome), that is, without the browser opening the graphical interface.
-
 All the commands below are done in the _command prompt_.
 
 **1** - Make a clone of the repository and access the directory created by the clone:

@@ -9,10 +9,7 @@ module.exports.config = {
   baseUrl: constants.BASE_URL,
   specs: ["specs/*.spec.js"],
   capabilities: {
-    browserName: "chrome",
-    chromeOptions: {
-      args: ["--headless", "--disable-gpu", "--window-size=1024,768"]
-    }
+    browserName: "chrome"
   },
   onPrepare: () => {
     browser.ignoreSynchronization = true;
