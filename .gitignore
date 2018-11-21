@@ -1,5 +1,5 @@
 debug.log
 allure-report/
-allure-results
+allure-results/
 node_modules/
 report/
