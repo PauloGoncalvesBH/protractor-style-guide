@@ -7,7 +7,7 @@
     "remove-report": "run-script-os",
     "remove-report:win32": "if exist allure-report rmdir allure-report /s /q",
     "remove-report:linux": "rm -f allure-report",
-    "pretest": "webdriver-manager update && npm run remove-report",
+    "pretest": "webdriver-manager update --gecko false && npm run remove-report",
     "test": "protractor",
     "posttest": "allure generate allure-results --clean -o allure-report || true",
     "report": "allure serve",
