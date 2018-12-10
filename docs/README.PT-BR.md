@@ -18,7 +18,7 @@ Todos os comandos abaixo são feitos no _prompt de comando_.
 **1** - Faça um clone do repositório e acesse o diretório criado pelo clone:
 
 ```sh
-git clone https://github.com/PauloGoncalvesBH/protractor-style-guide.git && cd protractor-exemplo
+git clone https://github.com/PauloGoncalvesBH/protractor-style-guide.git && cd protractor-style-guide
 ```
 
 **2** - Instale as dependências do projeto:
