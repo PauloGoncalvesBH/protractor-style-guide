@@ -24,7 +24,7 @@ git clone https://github.com/PauloGoncalvesBH/protractor-style-guide.git && cd p
 **2** - Install the project dependencies:
 
 ```sh
-npm install
+npm install --production
 ```
 
 **3** - And finally, enter the following command to run the tests:
