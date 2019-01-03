@@ -12,7 +12,7 @@ module.exports.config = {
     browserName: "chrome"
   },
   onPrepare: () => {
-    browser.ignoreSynchronization = true;
+    browser.waitForAngularEnabled(false);
     jasmine.getEnv().addReporter(
       new SpecReporter({
         suite: {
