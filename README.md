@@ -40,7 +40,7 @@ There are two ways to check the test results:
 1. Through the HTML report, enter the following command:
 
 ```sh
-npm run report
+npm run open-report
 ```
 
 2. From the command prompt, where you will see a similar result at the end of the test run:

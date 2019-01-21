@@ -40,7 +40,7 @@ Há dois modos de verificar o resultado dos testes:
 1. Através do report HTML, digitando o seguinte comando:
 
 ```sh
-npm run report
+npm run open-report
 ```
 
 2. Pelo prompt de comando, aonde você verá um resultado parecido com esse ao fim da execução dos testes:
