@@ -8,9 +8,7 @@ window.addEventListener("mouseup", function(event) {
   let dropdown = document.querySelector("#dropdown-list");
   if (
     event.target == trigger ||
-    (box.classList.contains("show") &&
-      event.target != trigger &&
-      event.target != triggerSmall)
+    (box.classList.contains("show") && event.target != trigger && event.target != triggerSmall)
   ) {
     classList(box).toggle("show");
   } else if (box.classList.contains("show") && event.target == triggerSmall) {
