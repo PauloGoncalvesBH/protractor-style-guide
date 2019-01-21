@@ -25,7 +25,7 @@ describe("'Sign up to win 1 million' form", () => {
   });
 
   it("Submit without fill field", () => {
-    Helper.clickWhenClickable(SamplePage.submitButton);
+    Helper.click(SamplePage.submitButton);
 
     Helper.waitForElementVisibility(SamplePage.alertFirstName);
     Helper.waitForElementVisibility(SamplePage.alertLastName);
@@ -33,8 +33,8 @@ describe("'Sign up to win 1 million' form", () => {
   });
 
   it("Submit filling only 'Message' field", () => {
-    Helper.fillFieldWithTextWhenVisible(SamplePage.messageTextarea, userData.message);
-    Helper.clickWhenClickable(SamplePage.submitButton);
+    Helper.fillFieldWithText(SamplePage.messageTextarea, userData.message);
+    Helper.click(SamplePage.submitButton);
 
     Helper.waitForElementVisibility(SamplePage.alertFirstName);
     Helper.waitForElementVisibility(SamplePage.alertLastName);
@@ -42,15 +42,12 @@ describe("'Sign up to win 1 million' form", () => {
   });
 
   it("Fill 'First name' field with 2 characters", () => {
-    Helper.fillFieldWithTextWhenVisibleAndPressEnter(SamplePage.firstNameInput, "ab");
+    Helper.fillFieldWithTextAndPressEnter(SamplePage.firstNameInput, "ab");
 
     Helper.waitForElementVisibility(SamplePage.alertFirstName);
   });
 
   it("Fill 'First name' field with 21 characters", () => {
-    Helper.fillFieldWithTextWhenVisibleAndPressEnter(
-      SamplePage.firstNameInput,
-      "Lorem ipsum dolor sit ame"
-    );
+    Helper.fillFieldWithTextAndPressEnter(SamplePage.firstNameInput, "Lorem ipsum dolor sit ame");
   });
 });

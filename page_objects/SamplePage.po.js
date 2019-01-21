@@ -33,10 +33,10 @@ class SamplePage {
   }
 
   fillFormAndSubmit(firstName, lastName, message) {
-    Helper.fillFieldWithTextWhenVisible(this.firstNameInput, firstName);
-    Helper.fillFieldWithTextWhenVisible(this.lastNameInput, lastName);
-    Helper.fillFieldWithTextWhenVisible(this.messageTextarea, message);
-    Helper.clickWhenClickable(this.submitButton);
+    Helper.fillFieldWithText(this.firstNameInput, firstName);
+    Helper.fillFieldWithText(this.lastNameInput, lastName);
+    Helper.fillFieldWithText(this.messageTextarea, message);
+    Helper.click(this.submitButton);
   }
 }
 
