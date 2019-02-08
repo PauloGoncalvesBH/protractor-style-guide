@@ -9,7 +9,10 @@ module.exports.config = {
   baseUrl: constants.BASE_URL,
   specs: ["specs/*.spec.js"],
   capabilities: {
-    browserName: "chrome"
+    browserName: "chrome",
+    chromeOptions: {
+      args: ["--headless"]
+    }
   },
   onPrepare: () => {
     browser.waitForAngularEnabled(false);
