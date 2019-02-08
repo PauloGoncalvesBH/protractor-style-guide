@@ -11,10 +11,9 @@ describe("'Sign up to win 1 million' form", () => {
     message: "Lorem ipsum dolor sit amet consectetur adipiscing elit"
   };
 
-  beforeEach(() => {
-    browser.driver.manage().deleteAllCookies();
-    SamplePage.visit();
-  });
+  beforeEach(() => SamplePage.visit());
+
+  afterEach(() => browser.driver.manage().deleteAllCookies());
 
   it("Submit filling all fields", () => {
     SamplePage.fillFormAndSubmit(userData.firstName, userData.lastName, userData.message);
