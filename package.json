@@ -32,12 +32,12 @@
     "allure-commandline": "^2.9.0",
     "jasmine-allure-reporter": "^1.0.2",
     "jasmine-spec-reporter": "^4.2.1",
-    "protractor": "latest",
+    "protractor": "^5.4.2",
     "protractor-helper": "^3.7.2",
     "run-script-os": "^1.0.5"
   },
   "devDependencies": {
     "pre-commit": "^1.2.2",
-    "prettier": "^1.16.0"
+    "prettier": "^1.16.4"
   }
 }
