@@ -28,7 +28,6 @@
   },
   "author": "Paulo Henrique Rocha Gonçalves <paulorochag@hotmail.com> (https://linkedin.com/in/paulo-goncalves)",
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
     "allure-commandline": "^2.9.0",
     "jasmine-allure-reporter": "^1.0.2",
