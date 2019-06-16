@@ -28,16 +28,15 @@
   },
   "author": "Paulo Henrique Rocha Gonçalves <paulorochag@hotmail.com> (https://linkedin.com/in/paulo-goncalves)",
   "license": "MIT",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "allure-commandline": "^2.9.0",
     "jasmine-allure-reporter": "^1.0.2",
     "jasmine-spec-reporter": "^4.2.1",
-    "protractor": "5.4.2",
-    "protractor-helper": "^3.7.3",
-    "run-script-os": "^1.0.5"
-  },
-  "devDependencies": {
     "pre-commit": "^1.2.2",
-    "prettier": "^1.16.4"
+    "prettier": "^1.16.4",
+    "protractor": "^5.4.2",
+    "protractor-helper": "^3.7.8",
+    "run-script-os": "^1.0.5"
   }
 }
