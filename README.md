@@ -26,7 +26,7 @@ git clone https://github.com/PauloGoncalvesBH/protractor-style-guide.git && cd p
 npm ci
 ```
 
-O comando [npm ci](https://docs.npmjs.com/cli/ci.html) instala as dependências do projeto de forma limpa. Uma diferença importante para o [npm install](https://docs.npmjs.com/cli/install) é que faz uma instalação "limpa", removendo o diretório _node_modules_ e instalando as versões listadas no  [package.json](./package.json) e [package-lock.json](./package-lock.json).
+O comando [npm ci](https://docs.npmjs.com/cli/ci.html) instala as dependências do projeto de forma limpa. Uma diferença importante para o [npm install](https://docs.npmjs.com/cli/install) é que remove o diretório _node_modules_ e instala as versões listadas no  [package.json](./package.json) e [package-lock.json](./package-lock.json).
 
 ### Executando os testes
 
