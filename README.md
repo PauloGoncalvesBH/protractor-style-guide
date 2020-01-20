@@ -1,74 +1,88 @@
-# Protractor Style Guide
+# Protractor - Guia de estilo
 
-[![library: protractor-helper](https://img.shields.io/badge/library-protractor--helper-blue.svg)](https://www.npmjs.com/package/protractor-helper)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://www.npmjs.com/package/prettier)
+[![E2E library: protractor](https://img.shields.io/badge/e2e%20library-protractor-blue)](https://www.npmjs.com/package/protractor)
 
-Automation style guide using Protractor and [Protractor-helper](https://www.npmjs.com/package/protractor-helper)
+Esse projeto exemplifica como deve ser a estrutura de uma automação feita com [Protractor](https://www.npmjs.com/package/protractor) de forma com que seja organizado, limpo e de fácil manutenção.
 
-[[Português - BR]](./docs/README.PT-BR.md)
+## Instalação e execução
 
-## Prerequisites
+### Pré-requisitos
 
-- [Git](https://git-scm.com/download/) and [Node.js](https://nodejs.org/en/download/) installeds.
+- [Git](https://git-scm.com/download/) e [Node.js](https://nodejs.org/en/download/) instalados.
 
-## Installing dependencies and running tests
+### Clonando o repositório
 
-All the commands below are done in the _command prompt_.
+Todos os comandos abaixo são feitos no terminal
 
-**1** - Make a clone of the repository and access the directory created by the clone:
+**1** - Faça um clone do repositório e acesse o diretório criado pelo clone:
 
 ```sh
 git clone https://github.com/PauloGoncalvesBH/protractor-style-guide.git && cd protractor-style-guide
 ```
 
-**2** - Install the project dependencies:
+**2** - Instale as dependências do projeto:
 
 ```sh
-npm install --production
+npm ci
 ```
 
-**3** - And finally, enter the following command to run the tests:
+O comando [npm ci](https://docs.npmjs.com/cli/ci.html) instala as dependências do projeto de forma limpa. Uma diferença importante para o [npm install](https://docs.npmjs.com/cli/install) é que faz uma instalação "limpa", removendo o diretório _node_modules_ e instalando as versões listadas no  [package.json](./package.json) e [package-lock.json](./package-lock.json).
+
+### Executando os testes
+
+Para executar os testes no **Chrome**, execute:
 
 ```sh
+npm run test:chrome
+```
+
+Para executar no **Firefox**, execute:
+
+```sh
+npm run test:firefox
+```
+
+Para executar em ambos os navegadores, execute:
+```
 npm test
 ```
 
-## Test result
+No início da execução o driver do navegador a ser executado é atualizado utilizando o comando `webdriver-manager update`. Verifique a seção _scripts_ no [package.json](package.json).
 
-There are two ways to check the test results:
+## Sobre o projeto
 
-1. Through the HTML report, enter the following command:
+### Dependências utilizadas
+- [Protractor](https://www.npmjs.com/package/protractor): Biblioteca de automação E2E.
+- [Protractor-helper](https://www.npmjs.com/package/protractor-helper): Biblioteca de ações/asserções que ajuda a tornar os testes robustos.
+- [Faker](https://www.npmjs.com/package/faker): Gera dados aleatórios para serem utilizados nos testes.
+- [Jasmine-spec-reporter](https://www.npmjs.com/package/jasmine-spec-reporter): Imprime resumo da execução no terminal de acordo com o configurado no arquivo de [configuração](e2e/configs/createProtractorConf.js).
 
-```sh
-npm run open-report
+As dependências estão definidas no [package.json](./package.json).
+
+### Estrutura de diretórios
+
+```
+protractor-style-guide/
+ |
+ ├─ e2e/
+ |   ├─ configs/
+ |   ├─ page_objects/
+ |   └─ spec/
+ |
+ ├─ .gitignore
+ ├─ package.json
+ └─ package-lock.json
 ```
 
-2. From the command prompt, where you will see a similar result at the end of the test run:
+- :file_folder: [e2e/](e2e): Dir com todos os arquivos da automação.
+  - :file_folder: [e2e/configs/](e2e/configs): Dir com os arquivos de configuração de quais testes devem ser executados, navegadores, report, etc.
+  - :file_folder: [e2e/page_objects/](e2e/page_objects): Dir com todos os métodos que interagem com o navegador e elementos mapeados. É consumido pelos arquivos em _spec/_.
+  - :file_folder: [e2e/spec/](e2e/spec): Dir com todos os casos de testes, consome os _page_objects_, é executado pelo conf em _configs_ e realiza asserções.
+- :page_with_curl: [.gitignore](.gitignore): Arquivo que define quais diretórios e arquivos devem ser ignorados pelo _Git_.
+- :page_with_curl: [package.json](package.json): Arquivo com informações das dependências do projeto, licença, scripts, autor, etc. Para saber mais [clique aqui](https://docs.npmjs.com/files/package.json).
+- :page_with_curl: [package-lock.json](package-lock.json): Arquivo gerado automaticamente quando são instaladas as dependências com `npm install`. Instalação feita com `npm ci` não o modifica. Para saber mais [clique aqui](https://docs.npmjs.com/files/package-lock.json).
 
-```sh
-> protractor-style-guide@1.0.0 test c:\protractor-style-guide
-> protractor
+---
+_Qualquer apoio que precisar me procure._ :camel:
 
-[01:40:30] I/launcher - Running 1 instances of WebDriver
-[01:40:30] I/local - Starting selenium standalone server...
-[01:40:31] I/local - Selenium standalone server started at http://192.168.0.3:49223/wd/hub
-Jasmine started
-
-  1 'Sign up to win 1 million' form
-    √ Fill 'First name' field with 21 characters (2 secs)
-    √ Submit without fill field (0.499 sec)
-    √ Fill 'First name' field with 2 characters (0.434 sec)
-    √ Submit filling all fields (0.725 sec)
-    √ Submit filling only 'Message' field (0.559 sec)
-
-Executed 5 of 5 specs SUCCESS in 4 secs.
-Randomized with seed 33052.
-[01:40:38] I/local - Shutting down selenium standalone server.
-[01:40:38] I/launcher - 0 instance(s) of WebDriver still running
-[01:40:38] I/launcher - chrome #01 passed
-
-> protractor-style-guide@1.0.0 posttest c:\protractor-style-guide
-> allure generate allure-results --clean -o allure-report || true
-
-Report successfully generated to allure-report
-```
+_[Licença MIT](LICENSE)_
